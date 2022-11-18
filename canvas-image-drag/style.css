@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  background: #000;
+}

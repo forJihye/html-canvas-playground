@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": "3.6.5",
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
+  "plugins": [ 
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator"
+  ] 
+}

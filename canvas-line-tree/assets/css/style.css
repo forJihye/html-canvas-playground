@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: fixed;
+  left: 200px;
+  top: 150px;
+  background: #f8f8f8;
+  /* border: 1px solid #666; */
+  /* box-sizing: border-box; */
+}

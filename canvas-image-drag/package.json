@@ -1,0 +1,27 @@
+{
+  "name": "canvas-image-drag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./ --out-dir build/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "babel-polyfill": "^6.26.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^3.1.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5"
+  },
+  "homepage": "http://JIHYE-P.github.io/drawImage-draggle"
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h3 style="text-align: center;">이미지 색상화</h3>
+    <div id="app" style="margin: 0 auto; text-align: center;"></div>
+    <div
+      id="information"
+      style="
+        width: 1000px;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      "
+    >
+      <div
+        id="rgb"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 30px;
+        "
+      >
+        <div
+          id="color"
+          style="
+            margin: 0 5px;
+            width: 30px;
+            height: 30px;
+            background: #000;
+            border: 1px solid #ddd;
+          "
+        ></div>
+        <p style="margin: 0 5px;">
+          R:
+          <strong
+            class="r"
+            style="
+              color: red;
+              width: 50px;
+              text-align: center;
+              display: inline-block;
+            "
+            >0</strong
+          >
+        </p>
+        <p style="margin: 0 5px;">
+          G:
+          <strong
+            class="g"
+            style="
+              color: red;
+              width: 50px;
+              text-align: center;
+              display: inline-block;
+            "
+            >0</strong
+          >
+        </p>
+        <p style="margin: 0 5px;">
+          B:
+          <strong
+            class="b"
+            style="
+              color: red;
+              width: 50px;
+              text-align: center;
+              display: inline-block;
+            "
+            >0</strong
+          >
+        </p>
+        명도:
+        <strong
+          class="brightness"
+          style="
+            color: red;
+            width: 50px;
+            text-align: center;
+            display: inline-block;
+          "
+          >0</strong
+        >
+      </div>
+
+      <div>
+        밝기
+        <div
+          style="
+            margin-bottom: 50px;
+            position: relative;
+            width: 500px;
+            height: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            background: linear-gradient(
+              90deg,
+              rgba(0, 0, 0, 1) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+        >
+          <div
+            class="bar1"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 12px;
+              height: 65px;
+              background: transparent;
+              border: 2px solid #000;
+              box-sizing: border-box;
+              border-radius: 5px;
+              transition: left 0.2s linear;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div>
+        색상
+        <div
+          style="
+            width: 500px;
+            height: 50px;
+            position: relative;
+            border: 1px solid red;
+            box-sizing: border-box;
+            background: linear-gradient(
+              90deg,
+              rgba(237, 140, 12, 1) 0%,
+              rgba(89, 153, 36, 1) 100%
+            );
+          "
+        >
+          <div
+            class="bar2"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 12px;
+              height: 65px;
+              background: transparent;
+              border: 2px solid #000;
+              box-sizing: border-box;
+              border-radius: 5px;
+              transition: left 0.2s linear;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

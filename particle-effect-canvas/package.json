@@ -1,0 +1,20 @@
+{
+  "name": "particle-effect-canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.10"
+  }
+}
