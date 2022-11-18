@@ -1,0 +1,28 @@
+{
+  "name": "hashsnap-kiosk-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.14.23",
+    "hex-rgb": "^5.0.0",
+    "process": "^0.11.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.tsx --inject:src/helper/react-shim.js --minify --pure:console.log --bundle --outfile=build/dist/index.js && cp index.html build/",
+    "start": "esbuild src/index.tsx --inject:src/helper/react-shim.js --sourcemap --bundle --watch --outfile=dist/index.js"
+  },
+  "keywords": [],
+  "author": "byjihye <byjihye@hashsnap.net> (https://github.com/byjihye)",
+  "license": "ISC"
+}
