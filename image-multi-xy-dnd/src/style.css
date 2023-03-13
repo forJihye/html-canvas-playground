@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #f8f8f8;
+}
+
+div.playground {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+}
+div.playground canvas {
+  width: auto;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "image-multi-xy-dnd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "esbuild src/main.js --watch --bundle --loader:.png=dataurl --loader:.jpg=file --outfile=dist/index.js",
+    "buile": "esbuild src/main.js --minify --pure:console.log --bundle --outfile=build/dist/index.js && cp index.html build/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.17.11"
+  }
+}

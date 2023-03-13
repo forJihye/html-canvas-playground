@@ -178,7 +178,7 @@ const isColorsize = false;
 
 const main = async () => { try {
   const urlQuery = location.search;
-  const mediaLabel = urlQuery.split('label=')[1] ?? 'Logitech BRIO';
+  const mediaLabel = urlQuery.split('label=')[1] ?? 'c922';
 
   const filter = {
     grayscale: 100,

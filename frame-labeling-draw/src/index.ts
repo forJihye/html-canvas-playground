@@ -245,22 +245,22 @@ const main = async () => { try {
   markFrameCtx.putImageData(markFrameData, 0, 0);
   imageCtx.drawImage(markFrameCanvas, 0, 0);
   
-  // templateCtx.globalCompositeOperation = 'multiply';
-  // templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1)
+  templateCtx.globalCompositeOperation = 'multiply';
+  templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1)
 
-  // imageCtx.drawImage(markFrameCanvas, 0, 0);
-  // templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1)
+  imageCtx.drawImage(markFrameCanvas, 0, 0);
+  templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1)
 
-  // imageCtx.globalCompositeOperation  = 'screen';
-  // markFrameCtx.drawImage(imageCanvas, 0, 0);
-  // markFrameCtx.drawImage(imageCanvas, 100, 100);
+  imageCtx.globalCompositeOperation  = 'screen';
+  markFrameCtx.drawImage(imageCanvas, 0, 0);
+  markFrameCtx.drawImage(imageCanvas, 100, 100);
 
   // const imageCanvas = document.createElement('canvas') as HTMLCanvasElement;
   // const imageCtx = imageCanvas.getContext('2d') as CanvasRenderingContext2D;
   // imageCanvas.width = labelMark1.width;
   // imageCanvas.height = labelMark1.height;
   // imageCtx.drawImage(img, 0, 0);
-  // drawCover(imageCtx, img1, 0, 0);
-  // templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1);
+  drawCover(imageCtx, img1, 0, 0);
+  templateCtx.drawImage(imageCanvas, labelMark1.x1, labelMark1.y1);
 } catch(err: any) { console.error(err) }}
 main();
