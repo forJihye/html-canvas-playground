@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: #ddd;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+  margin: 0 auto 30px;
+  padding-top: 30px;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+canvas {
+  width: auto;
+  height: 100%;
+}
+
+.image-list {
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.image-list img {
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const getMediaDevices = async (l) => {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+        console.error('Does not support enumerateDevices()');
+        return;
+      }
+      const mediaDevices = await navigator.mediaDevices.enumerateDevices();
+      console.log('1 ', mediaDevices)
+      const groupDevices = mediaDevices.reduce((acc, val) => {
+        const group = acc.find((deivce) => deivce.groupId === val.groupId) || (acc.push(({groupId: val.groupId, devices: []})), acc[acc.length - 1])
+        group.devices.push(val);
+        return acc;
+      }, []);
+      return groupDevices;
+    }
+
+    const getWebcamVideo = async () => {
+      const devices = await getMediaDevices();
+      const videoDevices = devices?.filter(({devices}) => devices.find((device) => device.kind === 'videoinput'));
+      console.log('get devices', devices, videoDevices);
+      const targetDevice = videoDevices?.[0];
+      const videoDevice = targetDevice?.devices.find(({kind}) => kind === 'videoinput');
+      console.log('videoDevice', videoDevice);
+      if (videoDevice) {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: {
+            width: { min: 1024, ideal: 1280, max: 1920 },
+            height: { min: 776, ideal: 720, max: 1080 },
+            frameRate: { min: 30, max: 60 },
+            deviceId: { exact: videoDevice.deviceId }
+          }
+        });
+        const video = document.createElement('video');
+        video.muted = true;
+        video.srcObject = stream;
+        await video.play();
+        return video;
+      } else {
+        console.error(`Not found webcam video`);
+        const img = await new Promise(res => {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = () => res(img);
+          img.src = 'https://dummyimage.com/400x100/666666/ffffff&text=Webcam+not+connected';
+        });
+        return img;
+      }
+    }
+
+    const main = async () => { try {
+      await getWebcamVideo();
+    } catch(err) {
+      console.error(err)
+    }}
+    main()
+  </script>
+</body>
+</html>
