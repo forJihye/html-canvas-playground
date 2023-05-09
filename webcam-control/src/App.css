@@ -1,0 +1,36 @@
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+}
+
+.form-control-group {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  z-index: 10;
+}
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.form-control .label,
+.form-control label {
+  font-size: 13px;
+  padding-right: 6px;
+}
+.form-control input {
+  max-width: 85px;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid #999;
+}
